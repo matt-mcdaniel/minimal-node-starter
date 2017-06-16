@@ -1,4 +1,4 @@
-const html = `
+require('http').createServer((req, res) => res.end(`
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,8 +11,4 @@ const html = `
 
   </body>
 </html>
-`;
-
-const server = require('http')
-    .createServer((request, response) => response.end(html))
-    .listen(8080);
+`)).listen(8080);
