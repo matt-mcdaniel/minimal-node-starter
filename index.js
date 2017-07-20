@@ -1,4 +1,6 @@
-require('http').createServer((req, res) => res.end(`
+const http = require('http');
+
+const server = http.createServer((req, res) => res.end(`
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,4 +13,6 @@ require('http').createServer((req, res) => res.end(`
 
   </body>
 </html>
-`)).listen(8080);
+`))
+
+server.listen(8080);
